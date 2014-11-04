@@ -16,5 +16,10 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+
+#文件
 _doc/*
 _refe/*
+＃相依套件
+Example/externals/*
