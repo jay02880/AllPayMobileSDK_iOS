@@ -19,6 +19,7 @@
     __weak IBOutlet UIButton *btnCredit;
     __weak IBOutlet UIButton *btnCredit1;
     __weak IBOutlet UIButton *btnCredit2;
+    __weak IBOutlet UIButton *btnCounterPayIN;
 }
 
 @end
@@ -43,6 +44,9 @@
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCredit];
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCredit1];
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCredit2];
+        [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCounterPayIN];
+    
+    
     
 }
 
@@ -236,6 +240,35 @@
 
     
     [APClientOrder getOrderViewWithAttributes:attributes];
+}
+- (IBAction)btnCounterPayIN_clickHandle:(id)sender {
+    
+    
+    NSMutableDictionary *attributes = [@{
+                                         @"MerchantID"          : @"2000031",    //廠商編號
+                                         @"AppCode"             : @"test_1234",    //App代碼
+                                         @"MerchantTradeNo"     : [self getRadomTradeNo],  //廠商交易編號
+                                         @"MerchantTradeDate"   : [self getDataString],  //廠商交易時間
+                                         @"TotalAmount"         : @100,                   //交易金額
+                                         @"TradeDesc"           : @"Allpay商城購物",         //交易描述
+                                         @"ItemName"            : @"手機20元X2#隨身碟60元X1"  ,//商品名稱
+                                         @"ChoosePayment"       : @"CounterPayIN",          //預設付款方式
+                                         
+                                         } mutableCopy];
+    
+    
+    NSLog(@"臨櫃繳款" );
+    //請參考 API 文件 11. 付款方式一覽表
+    //沒帶這個值將會出現銀行選擇
+    attributes[@"ChooseSubPayment"] = @"ESUN"; //(可不填)
+    
+    
+    //可設定有效時間(最長60天最短1天)可不填 (不填寫為預設3天）
+    attributes[@"ExpireDate"] = @7;
+    
+    [APClientOrder getOrderViewWithAttributes:attributes];
+    
+    
 }
 
 
