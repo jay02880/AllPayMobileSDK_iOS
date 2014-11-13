@@ -21,5 +21,7 @@ DerivedData
 #文件
 _doc/*
 _refe/*
+bin/*
+
 ＃相依套件
 Example/externals/*

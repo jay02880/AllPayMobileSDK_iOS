@@ -106,15 +106,6 @@
                                     <action selector="btnCredit_clickHandle:" destination="UXj-Md-O7B" eventType="touchUpInside" id="A1g-yX-UdA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YJ-6h-Z3W">
-                                <rect key="frame" x="46" y="380" width="228" height="30"/>
-                                <state key="normal" title="臨櫃繳款">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnCounterPayIN_clickHandle:" destination="UXj-Md-O7B" eventType="touchUpInside" id="YO1-Vp-aBo"/>
-                                </connections>
-                            </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP2-yD-aBs">
                                 <rect key="frame" x="0.0" y="357" width="320" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
@@ -127,13 +118,11 @@
                             <constraint firstItem="UP2-yD-aBs" firstAttribute="bottom" secondItem="q9g-BD-d8f" secondAttribute="top" id="9tS-jo-d9Y"/>
                             <constraint firstItem="4i2-JM-BNs" firstAttribute="baseline" secondItem="MEB-PT-5rx" secondAttribute="baseline" id="AUi-lT-eD4"/>
                             <constraint firstItem="hNM-8K-IGD" firstAttribute="top" secondItem="kBY-CJ-ShT" secondAttribute="bottom" constant="21" id="BXZ-2l-Xj5"/>
-                            <constraint firstItem="3YJ-6h-Z3W" firstAttribute="top" secondItem="hNM-8K-IGD" secondAttribute="bottom" constant="18" id="F7d-kG-PSg"/>
                             <constraint firstItem="yWT-lN-h8x" firstAttribute="top" secondItem="MEB-PT-5rx" secondAttribute="bottom" constant="14" id="FNf-La-ttz"/>
                             <constraint firstItem="MEB-PT-5rx" firstAttribute="top" secondItem="jit-SB-fa2" secondAttribute="bottom" constant="36" id="GkP-Yb-pf2"/>
                             <constraint firstItem="4i2-JM-BNs" firstAttribute="leading" secondItem="MEB-PT-5rx" secondAttribute="trailing" constant="-3" id="Hkf-Yu-mms"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="trailing" secondItem="hNM-8K-IGD" secondAttribute="trailing" id="NgE-dm-4n9"/>
                             <constraint firstItem="21t-le-PdG" firstAttribute="top" secondItem="yWT-lN-h8x" secondAttribute="bottom" constant="29" id="TwA-XA-lzQ"/>
-                            <constraint firstItem="3YJ-6h-Z3W" firstAttribute="leading" secondItem="hNM-8K-IGD" secondAttribute="leading" id="YYc-nf-xSx"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="top" secondItem="21t-le-PdG" secondAttribute="bottom" constant="15" id="Z0i-FI-qOH"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="leading" secondItem="hNM-8K-IGD" secondAttribute="leading" id="cqU-nu-eHu"/>
                             <constraint firstItem="jit-SB-fa2" firstAttribute="top" secondItem="DI1-7a-TFh" secondAttribute="bottom" constant="14" id="eqT-9k-Ym0"/>
@@ -143,7 +132,6 @@
                             <constraint firstItem="jit-SB-fa2" firstAttribute="centerX" secondItem="UP2-yD-aBs" secondAttribute="centerX" id="nPG-NK-V5m"/>
                             <constraint firstItem="Gac-fL-HAe" firstAttribute="baseline" secondItem="yWT-lN-h8x" secondAttribute="baseline" id="odF-yI-Yhz"/>
                             <constraint firstItem="MH1-iM-Nbk" firstAttribute="top" secondItem="kBY-CJ-ShT" secondAttribute="bottom" constant="1" id="t7F-h8-GEN"/>
-                            <constraint firstItem="3YJ-6h-Z3W" firstAttribute="trailing" secondItem="hNM-8K-IGD" secondAttribute="trailing" id="vqM-VI-Ra7"/>
                             <constraint firstItem="MH1-iM-Nbk" firstAttribute="centerX" secondItem="hNM-8K-IGD" secondAttribute="centerX" id="wq6-PX-QL7"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="leading" secondItem="21t-le-PdG" secondAttribute="leading" id="xxu-B2-1tz"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="centerX" secondItem="jit-SB-fa2" secondAttribute="centerX" id="y8h-HN-zrh"/>
@@ -154,7 +142,6 @@
                         <outlet property="atmLabel" destination="4i2-JM-BNs" id="Zbs-54-htR"/>
                         <outlet property="btnATM" destination="MEB-PT-5rx" id="PqH-mz-Sx7"/>
                         <outlet property="btnCVS" destination="yWT-lN-h8x" id="Gcd-LN-RTi"/>
-                        <outlet property="btnCounterPayIN" destination="3YJ-6h-Z3W" id="Ugh-Sg-4eh"/>
                         <outlet property="btnCredit" destination="hNM-8K-IGD" id="ATx-qk-wzU"/>
                         <outlet property="cvsLabel" destination="Gac-fL-HAe" id="gBz-zS-4Fb"/>
                         <outlet property="phone_tf" destination="kBY-CJ-ShT" id="9mr-gf-okh"/>
@@ -326,18 +313,6 @@
                                     <action selector="BtnCreditPeriod_clickHandle:" destination="O1I-GO-xsK" eventType="touchUpInside" id="J6g-Ir-cTy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZn-Ym-j63">
-                                <rect key="frame" x="85" y="364" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="IgP-ib-e7f"/>
-                                </constraints>
-                                <state key="normal" title="臨櫃繳款">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnCounterPayIN_clickHandle:" destination="O1I-GO-xsK" eventType="touchUpInside" id="Zso-CD-aSP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibU-oG-hDm">
                                 <rect key="frame" x="85" y="275" width="150" height="30"/>
                                 <constraints>
@@ -394,7 +369,6 @@
                             <constraint firstAttribute="centerX" secondItem="4Q5-AK-RWv" secondAttribute="centerX" id="ITt-3B-Abc"/>
                             <constraint firstItem="4Q5-AK-RWv" firstAttribute="leading" secondItem="MzP-2a-sAc" secondAttribute="leading" id="Kt4-xg-XC1"/>
                             <constraint firstItem="S3h-tx-jbo" firstAttribute="top" secondItem="sda-ms-GKJ" secondAttribute="bottom" constant="120" id="LK8-y3-6eo"/>
-                            <constraint firstItem="cZn-Ym-j63" firstAttribute="top" secondItem="WyF-8a-ADs" secondAttribute="bottom" constant="15" id="QXa-X5-4Db"/>
                             <constraint firstItem="ibU-oG-hDm" firstAttribute="centerX" secondItem="FuX-lu-QlK" secondAttribute="centerX" id="TSC-lR-Y9l"/>
                             <constraint firstItem="S3h-tx-jbo" firstAttribute="top" secondItem="kHh-9x-DAi" secondAttribute="bottom" constant="8" symbolic="YES" id="UgJ-Zt-RXu"/>
                             <constraint firstItem="t8y-yf-WQv" firstAttribute="trailing" secondItem="WZ3-F8-x1X" secondAttribute="trailing" id="VkJ-nY-lMo"/>
@@ -410,7 +384,6 @@
                             <constraint firstItem="ibU-oG-hDm" firstAttribute="top" secondItem="FuX-lu-QlK" secondAttribute="bottom" constant="15" id="oQx-Jt-OkO"/>
                             <constraint firstItem="d72-zq-bNn" firstAttribute="leading" secondItem="FuX-lu-QlK" secondAttribute="leading" id="pRw-E4-PqF"/>
                             <constraint firstItem="t8y-yf-WQv" firstAttribute="leading" secondItem="WZ3-F8-x1X" secondAttribute="leading" id="sE4-vX-ZaW"/>
-                            <constraint firstItem="cZn-Ym-j63" firstAttribute="leading" secondItem="WyF-8a-ADs" secondAttribute="leading" id="td1-ZB-zPb"/>
                             <constraint firstItem="t8y-yf-WQv" firstAttribute="leading" secondItem="S3h-tx-jbo" secondAttribute="trailing" constant="-7" id="u0J-DS-dK4"/>
                             <constraint firstItem="WyF-8a-ADs" firstAttribute="centerX" secondItem="ibU-oG-hDm" secondAttribute="centerX" id="v1m-Bc-1IR"/>
                             <constraint firstItem="4Q5-AK-RWv" firstAttribute="bottom" secondItem="MzP-2a-sAc" secondAttribute="top" id="v64-il-Ti7"/>
@@ -424,7 +397,6 @@
                         <outlet property="btnALL" destination="d72-zq-bNn" id="6cP-44-YTn"/>
                         <outlet property="btnATM" destination="kHh-9x-DAi" id="zbg-8x-eUv"/>
                         <outlet property="btnCVS" destination="S3h-tx-jbo" id="y6f-h3-TYV"/>
-                        <outlet property="btnCounterPayIN" destination="cZn-Ym-j63" id="7TL-yd-k9t"/>
                         <outlet property="btnCredit" destination="FuX-lu-QlK" id="AMS-av-VVk"/>
                         <outlet property="btnCredit1" destination="ibU-oG-hDm" id="ICy-qc-gKZ"/>
                         <outlet property="btnCredit2" destination="WyF-8a-ADs" id="c2w-Yr-wNz"/>
