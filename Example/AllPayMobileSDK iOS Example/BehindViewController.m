@@ -15,7 +15,9 @@
 #define MerchantID @"2000031" //廠商編號
 #define AppCode @"test_1234" //App代碼
 
-
+//for 平台
+#define platformAppCode @"test_abcd"
+#define platformID @"1000139" //平台商ID 非必要
 
 @interface BehindViewController ()
 {
@@ -27,6 +29,7 @@
     __weak IBOutlet UISegmentedControl *seqmented;
     __weak IBOutlet UITextField *phone_tf;
     __weak IBOutlet UILabel *validateMsg;
+    __weak IBOutlet UIButton *btnPlatform;
     
     id sendResponseObject;
     PopUpViewController *popViewController;
@@ -55,6 +58,8 @@
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:21.0/255.0 green:128.0/255.0 blue:242.0/255.0 alpha:1.0] forButton:btnATM];
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:21.0/255.0 green:128.0/255.0 blue:242.0/255.0 alpha:1.0] forButton:btnCVS];
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:21.0/255.0 green:128.0/255.0 blue:242.0/255.0 alpha:1.0] forButton:btnCredit];
+    [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:21.0/255.0 green:128.0/255.0 blue:242.0/255.0 alpha:1.0] forButton:btnPlatform];
+    
     
     keyboard = [[KBKeyboardHandler alloc] init];
     keyboard.delegate = self;
@@ -236,7 +241,7 @@
     //可設定有效時間(最長60天最短1天)可不填 (不填寫為預設3天）
     attributes[@"ExpireDate"] = @7;
     
-    AFHTTPRequestOperationManager *manager = [APServerOrder create:attributes
+    __unused AFHTTPRequestOperationManager *manager = [APServerOrder create:attributes
                                                             action:^(id responseObject, NSError *error){
         
         if(error){
@@ -470,6 +475,62 @@
 }
 
 
+
+/*
+ 使用特約合作平台商代號
+ 可搭配以上任何模式
+ 以下配合 ATM
+ */
+
+- (IBAction)btnPlatform_clickHandle:(id)sender {
+    
+    if(!canLoadData){
+        return;
+    }
+    canLoadData = NO;
+    NSMutableDictionary *attributes = [@{
+                                         @"MerchantID"          : MerchantID,    //廠商編號
+                                         @"AppCode"             : platformAppCode,    //App代碼
+                                         @"MerchantTradeNo"     : [self getRadomTradeNo],  //廠商交易編號
+                                         @"MerchantTradeDate"   : [self getDataString],  //廠商交易時間
+                                         @"TotalAmount"         : @100,                   //交易金額
+                                         @"TradeDesc"           : @"Allpay商城購物",         //交易描述
+                                         @"ItemName"            : @"手機20元X2#隨身碟60元X1"  ,//商品名稱
+                                         @"ChoosePayment"       : @"ATM",          //預設付款方式
+                                         
+                                         } mutableCopy];
+    
+    
+    NSLog(@"ATM 付款 : %@" , atmLabel.text);
+    NSString *subPayment = atmLabel.text;
+    attributes[@"ChooseSubPayment"] = subPayment; //預設付款子項目
+    
+    
+    //特約平台商
+    attributes[@"PlatformID"]           = platformID ;    //特約合作平台 商代號(由 AllPay 提供)
+    attributes[@"PlatformChargeFee"]    = @50 ;   //特約合作平台商手續費(可為空)
+    
+    
+    
+    
+    
+    __unused AFHTTPRequestOperationManager *manager = [APServerOrder create:attributes
+                                                                     action:^(id responseObject, NSError *error){
+                                                                         
+                                                                         if(error){
+                                                                             NSLog(@"Error: %@", error);
+                                                                         }else{
+                                                                             NSLog(@"%@" ,responseObject);
+                                                                             
+                                                                             [self showResult:responseObject];
+                                                                             
+                                                                         }
+                                                                         canLoadData = YES;
+                                                                     }];
+    
+    
+    
+}
 
 
 

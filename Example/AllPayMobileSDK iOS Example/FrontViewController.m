@@ -9,8 +9,16 @@
 #import "FrontViewController.h"
 #import "AllPayMobileSDK.h"
 
+
+
+//修改成你使用的 ID
 #define MerchantID @"2000031" //廠商編號
 #define AppCode @"test_1234" //App代碼
+
+//for 平台
+#define platformAppCode @"test_abcd"
+#define platformID @"1000139" //平台商ID 非必要
+
 
 
 @interface FrontViewController ()
@@ -23,6 +31,7 @@
     __weak IBOutlet UIButton *btnCredit;
     __weak IBOutlet UIButton *btnCredit1;
     __weak IBOutlet UIButton *btnCredit2;
+    __weak IBOutlet UIButton *btnPlatform;
 }
 
 @end
@@ -47,6 +56,7 @@
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCredit];
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCredit1];
     [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnCredit2];
+    [self setRoundedBorder:5 borderWidth:1 color:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forButton:btnPlatform];
     
 }
 
@@ -242,6 +252,38 @@
     
     [APClientOrder getOrderViewWithAttributes:attributes];
 }
+
+
+
+/*
+ 使用特約合作平台商代號
+ 可搭配以上任何模式
+*/
+
+- (IBAction)BtnPlatform_clickHandle:(id)sender {
+    
+    NSMutableDictionary *attributes = [@{
+                                 @"MerchantID"          : MerchantID,    //廠商編號
+                                 @"AppCode"             : platformAppCode,    //App代碼
+                                 @"MerchantTradeNo"     : [self getRadomTradeNo],       //廠商交易編號(只允許英文字母數字)
+                                 @"MerchantTradeDate"   : [self getDataString],  //廠商交易時間
+                                 @"TotalAmount"         : @100,                   //交易金額
+                                 @"TradeDesc"           : @"Allpay商城購物",         //交易描述
+                                 @"ItemName"            : @"手機20元X2#隨身碟60元X1"  ,//商品名稱
+                                 @"ChoosePayment"       : @"ALL",          //預設付款方式
+                                 
+                                 
+                               
+                                 } mutableCopy];
+    
+    attributes[@"PlatformID"]           = platformID ;    //特約合作平台 商代號(由 AllPay 提供)
+    attributes[@"PlatformChargeFee"]    = @30 ;   //特約合作平台商手續費可為空
+
+    
+    [APClientOrder getOrderViewWithAttributes:attributes];
+}
+
+
 
 
 @end

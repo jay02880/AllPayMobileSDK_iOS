@@ -106,6 +106,15 @@
                                     <action selector="btnCredit_clickHandle:" destination="UXj-Md-O7B" eventType="touchUpInside" id="A1g-yX-UdA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLL-ge-Xsx">
+                                <rect key="frame" x="46" y="374" width="228" height="30"/>
+                                <state key="normal" title="特約合作平台商">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPlatform_clickHandle:" destination="UXj-Md-O7B" eventType="touchUpInside" id="FJe-dn-fbA"/>
+                                </connections>
+                            </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP2-yD-aBs">
                                 <rect key="frame" x="0.0" y="357" width="320" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
@@ -114,7 +123,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gac-fL-HAe" firstAttribute="leading" secondItem="yWT-lN-h8x" secondAttribute="trailing" constant="-1" id="1gk-5G-Kmm"/>
+                            <constraint firstItem="uLL-ge-Xsx" firstAttribute="top" secondItem="hNM-8K-IGD" secondAttribute="bottom" constant="12" id="3iJ-Qy-xKe"/>
                             <constraint firstItem="jit-SB-fa2" firstAttribute="centerX" secondItem="k5S-kg-rGT" secondAttribute="centerX" id="4s3-T4-vjd"/>
+                            <constraint firstItem="uLL-ge-Xsx" firstAttribute="leading" secondItem="hNM-8K-IGD" secondAttribute="leading" id="6D1-Cg-AiP"/>
                             <constraint firstItem="UP2-yD-aBs" firstAttribute="bottom" secondItem="q9g-BD-d8f" secondAttribute="top" id="9tS-jo-d9Y"/>
                             <constraint firstItem="4i2-JM-BNs" firstAttribute="baseline" secondItem="MEB-PT-5rx" secondAttribute="baseline" id="AUi-lT-eD4"/>
                             <constraint firstItem="hNM-8K-IGD" firstAttribute="top" secondItem="kBY-CJ-ShT" secondAttribute="bottom" constant="21" id="BXZ-2l-Xj5"/>
@@ -133,6 +144,7 @@
                             <constraint firstItem="Gac-fL-HAe" firstAttribute="baseline" secondItem="yWT-lN-h8x" secondAttribute="baseline" id="odF-yI-Yhz"/>
                             <constraint firstItem="MH1-iM-Nbk" firstAttribute="top" secondItem="kBY-CJ-ShT" secondAttribute="bottom" constant="1" id="t7F-h8-GEN"/>
                             <constraint firstItem="MH1-iM-Nbk" firstAttribute="centerX" secondItem="hNM-8K-IGD" secondAttribute="centerX" id="wq6-PX-QL7"/>
+                            <constraint firstItem="uLL-ge-Xsx" firstAttribute="trailing" secondItem="hNM-8K-IGD" secondAttribute="trailing" id="xow-nQ-bKr"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="leading" secondItem="21t-le-PdG" secondAttribute="leading" id="xxu-B2-1tz"/>
                             <constraint firstItem="kBY-CJ-ShT" firstAttribute="centerX" secondItem="jit-SB-fa2" secondAttribute="centerX" id="y8h-HN-zrh"/>
                         </constraints>
@@ -143,6 +155,7 @@
                         <outlet property="btnATM" destination="MEB-PT-5rx" id="PqH-mz-Sx7"/>
                         <outlet property="btnCVS" destination="yWT-lN-h8x" id="Gcd-LN-RTi"/>
                         <outlet property="btnCredit" destination="hNM-8K-IGD" id="ATx-qk-wzU"/>
+                        <outlet property="btnPlatform" destination="uLL-ge-Xsx" id="dCp-RV-RMt"/>
                         <outlet property="cvsLabel" destination="Gac-fL-HAe" id="gBz-zS-4Fb"/>
                         <outlet property="phone_tf" destination="kBY-CJ-ShT" id="9mr-gf-okh"/>
                         <outlet property="picker" destination="UP2-yD-aBs" id="lgI-r4-dLG"/>
@@ -359,10 +372,20 @@
                                 <rect key="frame" x="0.0" y="357" width="320" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9m-YV-RdD">
+                                <rect key="frame" x="85" y="365" width="150" height="30"/>
+                                <state key="normal" title="特約合作平台商">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnPlatform_clickHandle:" destination="O1I-GO-xsK" eventType="touchUpInside" id="vIU-nt-Lpv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="WZ3-F8-x1X" secondAttribute="trailing" constant="27" id="7hi-HS-9Ji"/>
+                            <constraint firstItem="i9m-YV-RdD" firstAttribute="leading" secondItem="WyF-8a-ADs" secondAttribute="leading" id="A4c-Qf-E2d"/>
                             <constraint firstItem="WZ3-F8-x1X" firstAttribute="leading" secondItem="kHh-9x-DAi" secondAttribute="trailing" constant="-7" id="C0r-Mt-Ehh"/>
                             <constraint firstItem="kHh-9x-DAi" firstAttribute="baseline" secondItem="WZ3-F8-x1X" secondAttribute="baseline" id="Ch4-rl-yBb"/>
                             <constraint firstAttribute="centerX" secondItem="ZqD-bn-0G9" secondAttribute="centerX" id="GRD-6U-1QM"/>
@@ -380,6 +403,7 @@
                             <constraint firstItem="kHh-9x-DAi" firstAttribute="top" secondItem="d72-zq-bNn" secondAttribute="bottom" constant="8" symbolic="YES" id="cut-bp-e9Q"/>
                             <constraint firstItem="d72-zq-bNn" firstAttribute="centerX" secondItem="ZqD-bn-0G9" secondAttribute="centerX" id="ddJ-0D-Bpx"/>
                             <constraint firstItem="S3h-tx-jbo" firstAttribute="leading" secondItem="3oK-GY-bhs" secondAttribute="leadingMargin" constant="45" id="iad-ZS-g9U"/>
+                            <constraint firstItem="i9m-YV-RdD" firstAttribute="top" secondItem="WyF-8a-ADs" secondAttribute="bottom" constant="16" id="ijw-go-uWn"/>
                             <constraint firstItem="kHh-9x-DAi" firstAttribute="leading" secondItem="3oK-GY-bhs" secondAttribute="leadingMargin" constant="45" id="lBU-8y-c60"/>
                             <constraint firstItem="ibU-oG-hDm" firstAttribute="top" secondItem="FuX-lu-QlK" secondAttribute="bottom" constant="15" id="oQx-Jt-OkO"/>
                             <constraint firstItem="d72-zq-bNn" firstAttribute="leading" secondItem="FuX-lu-QlK" secondAttribute="leading" id="pRw-E4-PqF"/>
@@ -388,6 +412,7 @@
                             <constraint firstItem="WyF-8a-ADs" firstAttribute="centerX" secondItem="ibU-oG-hDm" secondAttribute="centerX" id="v1m-Bc-1IR"/>
                             <constraint firstItem="4Q5-AK-RWv" firstAttribute="bottom" secondItem="MzP-2a-sAc" secondAttribute="top" id="v64-il-Ti7"/>
                             <constraint firstItem="WyF-8a-ADs" firstAttribute="top" secondItem="ibU-oG-hDm" secondAttribute="bottom" constant="14" id="v6l-TX-8TE"/>
+                            <constraint firstItem="i9m-YV-RdD" firstAttribute="trailing" secondItem="WyF-8a-ADs" secondAttribute="trailing" id="xyz-Yi-aTh"/>
                             <constraint firstItem="FuX-lu-QlK" firstAttribute="top" secondItem="S3h-tx-jbo" secondAttribute="bottom" constant="16" id="yfd-Kh-Xd2"/>
                         </constraints>
                     </view>
@@ -400,6 +425,7 @@
                         <outlet property="btnCredit" destination="FuX-lu-QlK" id="AMS-av-VVk"/>
                         <outlet property="btnCredit1" destination="ibU-oG-hDm" id="ICy-qc-gKZ"/>
                         <outlet property="btnCredit2" destination="WyF-8a-ADs" id="c2w-Yr-wNz"/>
+                        <outlet property="btnPlatform" destination="i9m-YV-RdD" id="yzf-nd-ztj"/>
                         <outlet property="cvsLabel" destination="t8y-yf-WQv" id="aZk-WU-irf"/>
                         <outlet property="picker" destination="4Q5-AK-RWv" id="eUx-zp-fxT"/>
                         <outlet property="runVerLabel" destination="ZqD-bn-0G9" id="btf-e0-hlX"/>
