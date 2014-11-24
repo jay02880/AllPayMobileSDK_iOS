@@ -45,7 +45,7 @@
 
     //設定 運行環境 （重要）
     //預設為 APEnvironment_PRODUCT
-    APOrderGlobal.environment = APEnvironment_STAGE;
+    APGlobal.environment = APEnvironment_STAGE;
     //更新 ui label 顯示
     [self updateEnvironmentStatus];
     

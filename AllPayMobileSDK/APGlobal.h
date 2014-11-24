@@ -16,7 +16,7 @@ typedef enum {
 
 
 
-@interface APOrderGlobal : NSObject
+@interface APGlobal : NSObject
 
 // ---------------------------
 // * environment 運行的環境

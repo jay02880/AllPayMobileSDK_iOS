@@ -49,7 +49,7 @@
     canLoadData = YES;
     //設定 運行環境 （重要）
     //預設為 APEnvironment_PRODUCT
-    APOrderGlobal.environment = APEnvironment_STAGE;
+    APGlobal.environment = APEnvironment_STAGE;
 //    APOrderGlobal.environment = APEnvironment_PRODUCT;
     //更新 ui label 顯示
     [self updateEnvironmentStatus];

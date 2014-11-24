@@ -7,7 +7,7 @@
 //
 
 #import "APServerOrder.h"
-#import "APOrderGlobal.h"
+#import "APGlobal.h"
 
 
 
@@ -24,7 +24,7 @@
 +(NSString *)getAPIURLString
 {
     NSString *urlString = AP_PRODUCT_ServerOrder_URL_STRING;
-    if ([APOrderGlobal environment] == APEnvironment_STAGE) {
+    if ([APGlobal environment] == APEnvironment_STAGE) {
         urlString = AP_STAGE_ServerOrder_URL_STRING;
     }
     return urlString;
@@ -33,7 +33,7 @@
 +(NSString *)getOTPURLString
 {
     NSString *urlString = AP_PRODUCT_VerifyOtpCode_URL_STRING;
-    if ([APOrderGlobal environment] == APEnvironment_STAGE) {
+    if ([APGlobal environment] == APEnvironment_STAGE) {
         urlString = AP_STAGE_VerifyOtpCode_URL_STRING;
     }
     return urlString;

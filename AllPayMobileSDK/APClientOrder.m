@@ -7,7 +7,7 @@
 //
 
 #import "APClientOrder.h"
-#import "APOrderGlobal.h"
+#import "APGlobal.h"
 #import "APClientOrderViewCtrl.h"
 
 
@@ -45,7 +45,7 @@
 +(NSString *)getAPIURLString
 {
     NSString *urlString = AP_PRODUCT_ClientOrder_URL_STRING;
-    if ([APOrderGlobal environment] == APEnvironment_STAGE) {
+    if ([APGlobal environment] == APEnvironment_STAGE) {
         urlString = AP_STAGE_ClientOrder_URL_STRING;
     }
     return urlString;

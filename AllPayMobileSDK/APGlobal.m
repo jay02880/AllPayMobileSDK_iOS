@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 歐付寶. All rights reserved.
 //
 
-#import "APOrderGlobal.h"
+#import "APGlobal.h"
 
 static APEnvironment _environment = APEnvironment_PRODUCT;
 
-@implementation APOrderGlobal
+@implementation APGlobal
 
 + (APEnvironment) environment { return _environment; }
 + (void) setEnvironment:(APEnvironment )value { _environment = value; }
