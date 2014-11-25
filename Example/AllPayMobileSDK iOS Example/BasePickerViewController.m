@@ -123,4 +123,27 @@
 
 
 
+
+
+#pragma mark - Utils
+//隨機產生交易序號
+-(NSString *)getRadomTradeNo
+{
+    //這是範例隨機自定的，請使用自己定義的交易序號
+    return [NSString stringWithFormat:@"APSDK%lld",[@(floor([[NSDate date] timeIntervalSince1970] * 1000)) longLongValue] ];
+    
+}
+
+-(NSString *)getDataString
+{
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    NSString *dateString = [dateFormat stringFromDate:today];
+    NSLog(@"date: %@", dateString);
+    
+    return dateString;
+    
+}
+
 @end

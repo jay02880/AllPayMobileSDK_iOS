@@ -9,5 +9,6 @@
     #import "APServerOrder.h"
     #import "APGlobal.h"
     #import "APWebViewCtrl.h"
+    #import "APExpressMap.h"
 
 #endif /* _AllPayMobileSDK_ */

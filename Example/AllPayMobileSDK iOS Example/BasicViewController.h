@@ -24,8 +24,7 @@
 
 
 
--(NSString *)getRadomTradeNo;
--(NSString *)getDataString;
+
 
 -(void)updateEnvironmentStatus;
 

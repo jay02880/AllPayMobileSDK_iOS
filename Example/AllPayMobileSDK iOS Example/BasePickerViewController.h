@@ -18,7 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
-
+-(NSString *)getRadomTradeNo;
+-(NSString *)getDataString;
 -(void) handleSingleTap:(UITapGestureRecognizer *) tapper ;
 -(void)hidePickerAnim;
 -(void)showPickerAnim;
