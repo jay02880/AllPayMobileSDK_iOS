@@ -15,6 +15,7 @@
 		134FBEB41A035FAD0069EE42 /* NSDictionary+APURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FBEB31A035FAD0069EE42 /* NSDictionary+APURLEncoding.m */; };
 		1383865C1A246E7C00B01A8C /* LogisticsOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1383865B1A246E7C00B01A8C /* LogisticsOrderViewController.m */; };
 		1383865E1A24701900B01A8C /* truck-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1383865D1A24701900B01A8C /* truck-32.png */; };
+		138386611A247A7500B01A8C /* APLogisticsOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 138386601A247A7500B01A8C /* APLogisticsOrder.m */; };
 		13C668611A070910007FF6A6 /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C668601A070910007FF6A6 /* OTPViewController.m */; };
 		13C88FE91A05571A00DCF3A6 /* BehindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C88FE81A05571A00DCF3A6 /* BehindViewController.m */; };
 		13C88FEC1A0564FB00DCF3A6 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C88FEB1A0564FB00DCF3A6 /* BasicViewController.m */; };
@@ -61,6 +62,8 @@
 		1383865A1A246E7C00B01A8C /* LogisticsOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticsOrderViewController.h; sourceTree = "<group>"; };
 		1383865B1A246E7C00B01A8C /* LogisticsOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticsOrderViewController.m; sourceTree = "<group>"; };
 		1383865D1A24701900B01A8C /* truck-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "truck-32.png"; sourceTree = "<group>"; };
+		1383865F1A247A7500B01A8C /* APLogisticsOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLogisticsOrder.h; sourceTree = "<group>"; };
+		138386601A247A7500B01A8C /* APLogisticsOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLogisticsOrder.m; sourceTree = "<group>"; };
 		13C6685F1A070910007FF6A6 /* OTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
 		13C668601A070910007FF6A6 /* OTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
 		13C88FE71A05571A00DCF3A6 /* BehindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehindViewController.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				134FBEB31A035FAD0069EE42 /* NSDictionary+APURLEncoding.m */,
 				13EDB2A81A233AF8001C9A6B /* APExpressMap.h */,
 				13EDB2A91A233AF8001C9A6B /* APExpressMap.m */,
+				1383865F1A247A7500B01A8C /* APLogisticsOrder.h */,
+				138386601A247A7500B01A8C /* APLogisticsOrder.m */,
 			);
 			name = AllPayMobileSDK;
 			path = ../../AllPayMobileSDK;
@@ -352,6 +357,7 @@
 				13EDB2A71A232C80001C9A6B /* BasePickerViewController.m in Sources */,
 				13C8901C1A060B4E00DCF3A6 /* AFURLConnectionOperation.m in Sources */,
 				13C890171A060B4E00DCF3A6 /* AFHTTPRequestOperation.m in Sources */,
+				138386611A247A7500B01A8C /* APLogisticsOrder.m in Sources */,
 				13C890261A062CBB00DCF3A6 /* PopUpViewController.m in Sources */,
 				13C890191A060B4E00DCF3A6 /* AFHTTPSessionManager.m in Sources */,
 				13C8901D1A060B4E00DCF3A6 /* AFURLRequestSerialization.m in Sources */,

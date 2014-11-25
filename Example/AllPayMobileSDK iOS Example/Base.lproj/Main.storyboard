@@ -190,15 +190,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Ver." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BQ-hx-PHQ">
-                                <rect key="frame" x="34" y="74" width="244" height="21"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-bA-cM3">
+                                <rect key="frame" x="56" y="191" width="208" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="244" id="eLH-Wh-lhz"/>
+                                    <constraint firstAttribute="width" constant="208" id="S2x-Z3-oBH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <segments>
+                                    <segment title="不代收貨款"/>
+                                    <segment title="代收貨款"/>
+                                </segments>
+                            </segmentedControl>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-qv-EP7">
                                 <rect key="frame" x="0.0" y="357" width="320" height="162"/>
                             </pickerView>
@@ -214,24 +215,23 @@
                                     <action selector="callBtnClickHandle:" destination="xXT-gN-TJW" eventType="touchUpInside" id="Rfn-dn-97W"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-bA-cM3">
-                                <rect key="frame" x="56" y="191" width="208" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Ver." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BQ-hx-PHQ">
+                                <rect key="frame" x="38" y="72" width="244" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="208" id="S2x-Z3-oBH"/>
+                                    <constraint firstAttribute="width" constant="244" id="eLH-Wh-lhz"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="不代收貨款"/>
-                                    <segment title="代收貨款"/>
-                                </segments>
-                            </segmentedControl>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J6i-bA-cM3" firstAttribute="top" secondItem="zNj-Td-ipQ" secondAttribute="bottom" constant="32" id="1qo-9e-Cri"/>
-                            <constraint firstItem="8BQ-hx-PHQ" firstAttribute="top" secondItem="obQ-ap-pYz" secondAttribute="bottom" constant="10" id="4LU-o2-ue9"/>
-                            <constraint firstAttribute="centerX" secondItem="8BQ-hx-PHQ" secondAttribute="centerX" constant="4" id="5B1-4I-wju"/>
+                            <constraint firstItem="8BQ-hx-PHQ" firstAttribute="top" secondItem="obQ-ap-pYz" secondAttribute="bottom" constant="8" id="4LU-o2-ue9"/>
+                            <constraint firstAttribute="centerX" secondItem="8BQ-hx-PHQ" secondAttribute="centerX" id="5B1-4I-wju"/>
                             <constraint firstAttribute="centerX" secondItem="J6i-bA-cM3" secondAttribute="centerX" id="7K4-J6-PjA"/>
-                            <constraint firstItem="zNj-Td-ipQ" firstAttribute="top" secondItem="8BQ-hx-PHQ" secondAttribute="bottom" constant="43" id="8Vg-ho-8Ai"/>
+                            <constraint firstItem="zNj-Td-ipQ" firstAttribute="top" secondItem="8BQ-hx-PHQ" secondAttribute="bottom" constant="45" id="8Vg-ho-8Ai"/>
                             <constraint firstAttribute="trailing" secondItem="URZ-qv-EP7" secondAttribute="trailing" id="PjM-fe-cLX"/>
                             <constraint firstItem="6nN-vp-vSm" firstAttribute="top" secondItem="URZ-qv-EP7" secondAttribute="bottom" id="UhY-Xp-k5E"/>
                             <constraint firstAttribute="centerX" secondItem="zNj-Td-ipQ" secondAttribute="centerX" id="byW-om-Vuy"/>
@@ -263,13 +263,135 @@
                     <view key="view" contentMode="scaleToFill" id="59w-6d-4O6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0VR-lO-f4l">
+                                <rect key="frame" x="0.0" y="357" width="320" height="162"/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eKH-UX-GSC">
+                                <rect key="frame" x="56" y="180" width="208" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="KhD-nP-O4q"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="不代收貨款"/>
+                                    <segment title="代收貨款"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaN-O1-iMK">
+                                <rect key="frame" x="51" y="98" width="78" height="21"/>
+                                <string key="text">物流類型
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlW-Zl-lUp">
+                                <rect key="frame" x="56" y="290" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="vVW-OL-GAl"/>
+                                </constraints>
+                                <string key="text">交易編號
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-YS-Byr">
+                                <rect key="frame" x="169" y="98" width="123" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="3Pb-wx-7eN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物流子類型" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNQ-00-O57">
+                                <rect key="frame" x="51" y="127" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrq-9X-svJ">
+                                <rect key="frame" x="169" y="127" width="123" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="bEi-Pc-Ifp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-OR-qK3">
+                                <rect key="frame" x="101" y="227" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="RrJ-Oi-Uts"/>
+                                </constraints>
+                                <state key="normal" title="建立物流訂單">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createOrderBtnClick:" destination="ciI-zt-cXT" eventType="touchUpInside" id="OIr-Ll-IaC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3U-DL-d9O">
+                                <rect key="frame" x="101" y="324" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="FDL-sh-8yv"/>
+                                </constraints>
+                                <state key="normal" title="取消物流訂單">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnClick:" destination="ciI-zt-cXT" eventType="touchUpInside" id="GRG-A0-YQK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4c-ds-08E">
+                                <rect key="frame" x="129" y="286" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="qbR-do-4O9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gaN-OR-qK3" firstAttribute="centerX" secondItem="eKH-UX-GSC" secondAttribute="centerX" id="0TQ-JA-IVo"/>
+                            <constraint firstItem="a4c-ds-08E" firstAttribute="top" secondItem="gaN-OR-qK3" secondAttribute="bottom" constant="29" id="1Ez-r5-KUw"/>
+                            <constraint firstAttribute="centerX" secondItem="Q3U-DL-d9O" secondAttribute="centerX" id="1ix-Ru-5rR"/>
+                            <constraint firstItem="Rrq-9X-svJ" firstAttribute="leading" secondItem="a7a-YS-Byr" secondAttribute="leading" id="72v-4s-1sN"/>
+                            <constraint firstAttribute="centerX" secondItem="VaN-O1-iMK" secondAttribute="centerX" constant="70" id="9sv-Sz-Liw"/>
+                            <constraint firstItem="a4c-ds-08E" firstAttribute="baseline" secondItem="vlW-Zl-lUp" secondAttribute="baseline" constant="-1" id="Cg3-XQ-S2c"/>
+                            <constraint firstAttribute="trailing" secondItem="0VR-lO-f4l" secondAttribute="trailing" id="GPc-iF-964"/>
+                            <constraint firstItem="hNQ-00-O57" firstAttribute="baseline" secondItem="Rrq-9X-svJ" secondAttribute="baseline" id="H0p-C7-Fhu"/>
+                            <constraint firstItem="YtX-9B-AgJ" firstAttribute="top" secondItem="0VR-lO-f4l" secondAttribute="bottom" id="HLh-kO-e1u"/>
+                            <constraint firstAttribute="centerX" secondItem="eKH-UX-GSC" secondAttribute="centerX" id="J2w-4h-rLm"/>
+                            <constraint firstItem="a7a-YS-Byr" firstAttribute="leading" secondItem="VaN-O1-iMK" secondAttribute="trailing" constant="40" id="NxG-eE-51A"/>
+                            <constraint firstItem="a4c-ds-08E" firstAttribute="leading" secondItem="vlW-Zl-lUp" secondAttribute="trailing" constant="-5" id="U0x-d9-Q6q"/>
+                            <constraint firstItem="0VR-lO-f4l" firstAttribute="leading" secondItem="59w-6d-4O6" secondAttribute="leading" id="Wkg-eE-fib"/>
+                            <constraint firstItem="gaN-OR-qK3" firstAttribute="centerX" secondItem="0VR-lO-f4l" secondAttribute="centerX" id="ed5-4j-T9H"/>
+                            <constraint firstItem="Q3U-DL-d9O" firstAttribute="top" secondItem="vlW-Zl-lUp" secondAttribute="bottom" constant="13" id="hbd-gR-TTn"/>
+                            <constraint firstItem="eKH-UX-GSC" firstAttribute="top" secondItem="Rrq-9X-svJ" secondAttribute="bottom" constant="32" id="jKd-91-tac"/>
+                            <constraint firstItem="VaN-O1-iMK" firstAttribute="leading" secondItem="59w-6d-4O6" secondAttribute="leadingMargin" constant="35" id="oKC-bL-3Bs"/>
+                            <constraint firstItem="VaN-O1-iMK" firstAttribute="top" secondItem="vvY-sa-tnD" secondAttribute="bottom" constant="34" id="ogd-ol-k7Z"/>
+                            <constraint firstItem="VaN-O1-iMK" firstAttribute="baseline" secondItem="a7a-YS-Byr" secondAttribute="baseline" id="pVo-lG-0mU"/>
+                            <constraint firstItem="vlW-Zl-lUp" firstAttribute="leading" secondItem="eKH-UX-GSC" secondAttribute="leading" id="pwb-fn-uVF"/>
+                            <constraint firstItem="VaN-O1-iMK" firstAttribute="leading" secondItem="hNQ-00-O57" secondAttribute="leading" id="qp0-KK-u8Q"/>
+                            <constraint firstItem="hNQ-00-O57" firstAttribute="top" secondItem="VaN-O1-iMK" secondAttribute="bottom" constant="8" id="vyz-Wy-XQX"/>
+                            <constraint firstItem="gaN-OR-qK3" firstAttribute="top" secondItem="eKH-UX-GSC" secondAttribute="bottom" constant="19" id="ykP-Rw-hnm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="物流" id="NyV-9B-mYS"/>
+                    <connections>
+                        <outlet property="_logisticsIDLabel" destination="a4c-ds-08E" id="ktO-71-xcb"/>
+                        <outlet property="picker" destination="0VR-lO-f4l" id="6rG-dq-DtK"/>
+                        <outlet property="seqmented" destination="eKH-UX-GSC" id="ZxH-f2-igD"/>
+                        <outlet property="subTypeLabel" destination="Rrq-9X-svJ" id="gH0-0a-gwX"/>
+                        <outlet property="typeLabel" destination="a7a-YS-Byr" id="4qY-ks-fR5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cv-ef-g86" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843" y="1858"/>
+            <point key="canvasLocation" x="717" y="1858"/>
         </scene>
         <!--OTP 驗證碼-->
         <scene sceneID="OVc-M0-tO1">
@@ -639,7 +761,7 @@
         <image name="card_in_use-32.png" width="32" height="32"/>
         <image name="map_marker-32.png" width="32" height="32"/>
         <image name="money_box-32.png" width="32" height="32"/>
-        <image name="truck-32.png" width="40" height="40"/>
+        <image name="truck-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BasePickerViewController.h"
+#import "AllPayMobileSDK.h"
+
 
 @interface LogisticsOrderViewController : BasePickerViewController
+
+
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 @end
