@@ -252,6 +252,25 @@
             </objects>
             <point key="canvasLocation" x="853" y="1182"/>
         </scene>
+        <!--物流-->
+        <scene sceneID="WMj-EH-eIl">
+            <objects>
+                <viewController id="ciI-zt-cXT" customClass="LogisticsOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vvY-sa-tnD"/>
+                        <viewControllerLayoutGuide type="bottom" id="YtX-9B-AgJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="59w-6d-4O6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="物流" id="NyV-9B-mYS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cv-ef-g86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="1858"/>
+        </scene>
         <!--OTP 驗證碼-->
         <scene sceneID="OVc-M0-tO1">
             <objects>
@@ -532,11 +551,12 @@
                         <segue destination="LcU-aw-Hm6" kind="relationship" relationship="viewControllers" id="3Rr-5k-enV"/>
                         <segue destination="ncz-a6-fBI" kind="relationship" relationship="viewControllers" id="Ltl-dT-qmp"/>
                         <segue destination="UYp-Ld-Clo" kind="relationship" relationship="viewControllers" id="K1b-t5-6vt"/>
+                        <segue destination="Ub4-Uh-4vd" kind="relationship" relationship="viewControllers" id="7nV-lk-dih"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5z-NN-gBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="498"/>
+            <point key="canvasLocation" x="-321" y="870"/>
         </scene>
         <!--幕後-->
         <scene sceneID="3Am-oV-ogL">
@@ -595,11 +615,31 @@
             </objects>
             <point key="canvasLocation" x="416" y="1188"/>
         </scene>
+        <!--物流-->
+        <scene sceneID="jXd-gC-Pfo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ub4-Uh-4vd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="物流" image="truck-32.png" id="owl-ih-eiD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXq-2L-Dbf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ciI-zt-cXT" kind="relationship" relationship="rootViewController" id="X5b-wN-1Qb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qG4-Jj-k0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="1866"/>
+        </scene>
     </scenes>
     <resources>
         <image name="card_in_use-32.png" width="32" height="32"/>
         <image name="map_marker-32.png" width="32" height="32"/>
         <image name="money_box-32.png" width="32" height="32"/>
+        <image name="truck-32.png" width="40" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -13,6 +13,8 @@
 		130B25841A01E3AB003AF3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130B25821A01E3AB003AF3A5 /* Main.storyboard */; };
 		132A6A471A077D04002F0368 /* APWebViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 132A6A461A077D04002F0368 /* APWebViewCtrl.m */; };
 		134FBEB41A035FAD0069EE42 /* NSDictionary+APURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FBEB31A035FAD0069EE42 /* NSDictionary+APURLEncoding.m */; };
+		1383865C1A246E7C00B01A8C /* LogisticsOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1383865B1A246E7C00B01A8C /* LogisticsOrderViewController.m */; };
+		1383865E1A24701900B01A8C /* truck-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1383865D1A24701900B01A8C /* truck-32.png */; };
 		13C668611A070910007FF6A6 /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C668601A070910007FF6A6 /* OTPViewController.m */; };
 		13C88FE91A05571A00DCF3A6 /* BehindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C88FE81A05571A00DCF3A6 /* BehindViewController.m */; };
 		13C88FEC1A0564FB00DCF3A6 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C88FEB1A0564FB00DCF3A6 /* BasicViewController.m */; };
@@ -56,6 +58,9 @@
 		132A6A461A077D04002F0368 /* APWebViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APWebViewCtrl.m; sourceTree = "<group>"; };
 		134FBEB21A035FAD0069EE42 /* NSDictionary+APURLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+APURLEncoding.h"; sourceTree = "<group>"; };
 		134FBEB31A035FAD0069EE42 /* NSDictionary+APURLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+APURLEncoding.m"; sourceTree = "<group>"; };
+		1383865A1A246E7C00B01A8C /* LogisticsOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticsOrderViewController.h; sourceTree = "<group>"; };
+		1383865B1A246E7C00B01A8C /* LogisticsOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticsOrderViewController.m; sourceTree = "<group>"; };
+		1383865D1A24701900B01A8C /* truck-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "truck-32.png"; sourceTree = "<group>"; };
 		13C6685F1A070910007FF6A6 /* OTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
 		13C668601A070910007FF6A6 /* OTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
 		13C88FE71A05571A00DCF3A6 /* BehindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehindViewController.h; sourceTree = "<group>"; };
@@ -158,6 +163,8 @@
 				13EDB2A31A232774001C9A6B /* ExpressMapViewController.m */,
 				13EDB2A51A232C80001C9A6B /* BasePickerViewController.h */,
 				13EDB2A61A232C80001C9A6B /* BasePickerViewController.m */,
+				1383865A1A246E7C00B01A8C /* LogisticsOrderViewController.h */,
+				1383865B1A246E7C00B01A8C /* LogisticsOrderViewController.m */,
 				130B25781A01E3AB003AF3A5 /* Supporting Files */,
 			);
 			path = "AllPayMobileSDK iOS Example";
@@ -179,6 +186,7 @@
 		13C88FED1A05DE6F00DCF3A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1383865D1A24701900B01A8C /* truck-32.png */,
 				13EDB2A01A232475001C9A6B /* map_marker-32.png */,
 				13C88FF41A05DF0600DCF3A6 /* card_in_use-32.png */,
 				13C88FF51A05DF0600DCF3A6 /* money_bag-32.png */,
@@ -320,6 +328,7 @@
 				13C88FFB1A05DF0600DCF3A6 /* purchase_order-32.png in Resources */,
 				13C88FF81A05DF0600DCF3A6 /* card_in_use-32.png in Resources */,
 				13C890271A062CBB00DCF3A6 /* PopUpViewController.xib in Resources */,
+				1383865E1A24701900B01A8C /* truck-32.png in Resources */,
 				13DDC9AB1A02270000792263 /* Images.xcassets in Resources */,
 				13DDC9B41A023C6A00792263 /* APWebViewCtrl.xib in Resources */,
 				130B25841A01E3AB003AF3A5 /* Main.storyboard in Resources */,
@@ -352,6 +361,7 @@
 				13DDC9B11A02343700792263 /* APClientOrder.m in Sources */,
 				13C890181A060B4E00DCF3A6 /* AFHTTPRequestOperationManager.m in Sources */,
 				13EDB2AA1A233AF8001C9A6B /* APExpressMap.m in Sources */,
+				1383865C1A246E7C00B01A8C /* LogisticsOrderViewController.m in Sources */,
 				132A6A471A077D04002F0368 /* APWebViewCtrl.m in Sources */,
 				13C668611A070910007FF6A6 /* OTPViewController.m in Sources */,
 				13C88FEC1A0564FB00DCF3A6 /* BasicViewController.m in Sources */,
