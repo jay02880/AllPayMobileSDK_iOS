@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BasePickerViewController.h"
-@interface ExpressMapViewController : BasePickerViewController
+#import "AllPayMobileSDK.h"
+
+@interface ExpressMapViewController : BasePickerViewController<APWebViewCtrlDelegate>
 {
     @protected
     __weak IBOutlet UILabel *runVerLabel;

@@ -8,15 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-
-
+#import "APWebViewCtrl.h"
 
 
 @interface APExpressMap : NSObject
 
 
-+(void)getWebViewWithAttributes:(NSDictionary *)attributes;
++(void)getWebViewWithDelegate:(id<APWebViewCtrlDelegate>)delegate attributes:(NSDictionary *)attributes;
 
 
 
 @end
+
+
+
+

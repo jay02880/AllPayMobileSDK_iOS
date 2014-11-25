@@ -8,8 +8,17 @@
 
 #import "ExpressMapViewController.h"
 
-@interface ExpressMapViewController ()
+#import "PopUpViewController.h"
 
+//修改成你使用的 ID
+#define MerchantID @"2000031" //廠商編號
+#define AppCode @"test_1234" //App代碼
+
+@interface ExpressMapViewController ()
+{
+    PopUpViewController *popViewController;
+    __weak IBOutlet UISegmentedControl *seqmented;
+}
 @end
 
 @implementation ExpressMapViewController
@@ -58,11 +67,11 @@
 
 -(void)updateEnvironmentStatus
 {
-//    if (APOrderGlobal.environment ==APEnvironment_PRODUCT) {
-//        runVerLabel.text = @"Run Ver : Stage(正式環境)";
-//    } else {
-//        runVerLabel.text = @"Run Ver : Stage(測試環境)";
-//    }
+    if (APGlobal.environment ==APEnvironment_PRODUCT) {
+        runVerLabel.text = @"Run Ver : Stage(正式環境)";
+    } else {
+        runVerLabel.text = @"Run Ver : Stage(測試環境)";
+    }
 }
 
 
@@ -84,6 +93,44 @@
 }
 
 
+- (IBAction)callBtnClickHandle:(id)sender {
+    
+    
+    NSString *IsCollection = [seqmented selectedSegmentIndex] == 0 ? @"N" : @"Y";
+    
+    NSDictionary *attributes = @{
+                                 @"MerchantID"          : MerchantID,    //廠商編號
+                                 @"MerchantTradeNo"     : [self getRadomTradeNo],       //廠商交易編號(只允許英文字母數字)
+                                 @"LogisticsType"       : @"CVS",   //物流類型
+                                 @"LogisticsSubType"   : typeLabel.text, //物流子類型
+                                 @"IsCollection" :IsCollection, //是否代收貨款
+                                 @"ExtraData": @"msg" , //額外資訊 (可為空）
+                                 
+                                 };
+    
+
+    [APExpressMap getWebViewWithDelegate:self attributes:attributes];
+    
+}
+
+
+-(void)getExpressMap:(NSDictionary *)aDict
+{
+     NSLog(@"%@" , aDict);
+    
+    [self showResult:aDict];
+}
+
+
+
+-(void)showResult:(id)responseObject{
+    popViewController= [[PopUpViewController alloc] initWithNibName:@"PopUpViewController" bundle:nil];
+    
+    //取得最上層 view
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootViewController = window.rootViewController;
+    [popViewController showInView:rootViewController.view withText:[responseObject description] animated:YES];
+}
 
 
 @end

@@ -9,21 +9,31 @@
 #import "APExpressMap.h"
 #import "APGlobal.h"
 
-#import "APWebViewCtrl.h"
+
+#define AP_STAGE_ExpressMap_URL_STRING @"http://logistics-stage.allpay.com.tw/Express/map"
+#define AP_PRODUCT_ExpressMap_URL_STRING @"https://logistics.allpay.com.tw/Express/map"
 
 
-#define AP_STAGE_ExpressMap_URL_STRING @"http://payment-stage.allpay.com.tw/Mobile/CreateClientOrder"
-#define AP_PRODUCT_ExpressMap_URL_STRING @"https://payment.allpay.com.tw/Mobile/CreateClientOrder"
 
 
 
 @implementation APExpressMap
 
-+(void)getWebViewWithAttributes:(NSDictionary *)attributes
-{
-    [APWebViewCtrl getWebViewWithURL:[self getAPIURLString] attributes:attributes];
-}
 
+
++(void)getWebViewWithDelegate:(id<APWebViewCtrlDelegate>)delegate attributes:(NSDictionary *)attributes
+{
+    
+    NSMutableDictionary *nDict = [attributes mutableCopy];
+    
+    if([nDict objectForKey:@"ClientReplyURL"] == nil){
+        nDict[@"ServerReplyURL"] = @"apmsdk://ExpressMap/";
+        nDict[@"IsGet"] =@"Y";
+    }
+    
+    
+    [APWebViewCtrl getWebViewWithDelegate:delegate URL:[[self class] getAPIURLString] attributes:nDict];
+}
 
 
 +(NSString *)getAPIURLString

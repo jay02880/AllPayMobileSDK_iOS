@@ -8,22 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
-@interface APWebViewCtrl : UIViewController
+@protocol APWebViewCtrlDelegate <NSObject>
+
+@optional
+-(void)getExpressMap:(NSDictionary *)aDict;
+@end
+
+@interface APWebViewCtrl : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic) NSString *url;
 
+@property (weak, nonatomic) id<APWebViewCtrlDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
--(instancetype) initDefaultXib:(NSDictionary *)attributes;
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
 // ---------------------------
 // * 顯示WebView
 // ---------------------------
-+(void)getWebViewWithURL:(NSString * )url attributes:(NSDictionary *)attributes;
++(instancetype)getWebViewWithURL:(NSString * )url attributes:(NSDictionary *)attributes;
 
++(instancetype)getWebViewWithDelegate:(id<APWebViewCtrlDelegate>)delegate URL:(NSString * )url attributes:(NSDictionary *)attributes;
 //取得 rootViewController (UI 顯示用）
 +(UIViewController *)getRootViewController;
+
+
++ (NSDictionary *)dictionaryWithQueryString:(NSString *)queryString;
 
 
 @end
