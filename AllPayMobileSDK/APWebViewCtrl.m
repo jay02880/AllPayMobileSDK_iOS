@@ -6,24 +6,25 @@
 //  Copyright (c) 2014年 歐付寶. All rights reserved.
 //
 
-#import "APClientOrderViewCtrl.h"
+#import "APWebViewCtrl.h"
 #import "NSDictionary+APURLEncoding.h"
 #import "APClientOrder.h"
 
-@interface APClientOrderViewCtrl()
+@interface APWebViewCtrl()
 {
     NSArray *nib;
     NSString *queryString;
+
 }
 @end
-@implementation APClientOrderViewCtrl
+@implementation APWebViewCtrl
 
 
 
 -(instancetype) initDefaultXib:(NSDictionary *)attributes
 {
     if(self = [super init]){
-                nib =[[NSBundle mainBundle] loadNibNamed:@"APClientOrderViewCtrl" owner:self options:nil];
+                nib =[[NSBundle mainBundle] loadNibNamed:@"APWebViewCtrl" owner:self options:nil];
 //        [[NSBundle mainBundle] loadNibNamed:@"APWebView" owner:self options:nil] ;
         
         queryString = [attributes urlEncodedString];
@@ -51,31 +52,54 @@
     self.activityIndicator.hidden=YES;
     
     self.navigationItem.title= @"AllPay";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"關閉" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(cancel)];
     
     [self postData];
     
     
 }
 
-
 //取消交易
 -(void)cancel{
     
-    UIViewController *rootViewController =[APClientOrder getRootViewController];
+    UIViewController *rootViewController =[[self class] getRootViewController];
     [rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)postData
 {
-    
-    NSURL *url = [NSURL URLWithString:[APClientOrder getAPIURLString]];
+    NSURL *url = [NSURL URLWithString:self.url];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url];
     [request setHTTPMethod: @"POST"];
     [request setHTTPBody: [queryString dataUsingEncoding: NSUTF8StringEncoding]];
     [self.webView loadRequest: request];
 }
 
+
+
+
+
++(UIViewController *)getRootViewController
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootViewController = window.rootViewController;
+    return rootViewController;
+}
+
+//
++(void)getWebViewWithURL:(NSString * )url attributes:(NSDictionary *)attributes
+{
+    
+    APWebViewCtrl *viewCtrl = [[APWebViewCtrl alloc] initDefaultXib:attributes];
+    
+    viewCtrl.url = url;
+    
+    UINavigationController *nav = [[UINavigationController alloc]
+                                   initWithRootViewController:viewCtrl];
+    
+    UIViewController *rootViewController =[self getRootViewController];
+    [rootViewController presentViewController:nav animated:YES completion:nil];
+}
 
 
 //#pragma mark - UIWebView

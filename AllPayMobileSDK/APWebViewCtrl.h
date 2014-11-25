@@ -8,11 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface APClientOrderViewCtrl : UIViewController
+@interface APWebViewCtrl : UIViewController
+
+@property (nonatomic) NSString *url;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 -(instancetype) initDefaultXib:(NSDictionary *)attributes;
+
+// ---------------------------
+// * 顯示WebView
+// ---------------------------
++(void)getWebViewWithURL:(NSString * )url attributes:(NSDictionary *)attributes;
+
+//取得 rootViewController (UI 顯示用）
++(UIViewController *)getRootViewController;
+
+
 @end
 

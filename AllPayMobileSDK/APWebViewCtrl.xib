@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APClientOrderViewCtrl">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APWebViewCtrl">
             <connections>
                 <outlet property="activityIndicator" destination="iYC-gi-bRb" id="ZfN-Br-9Ed"/>
                 <outlet property="view" destination="b98-e6-2yQ" id="klY-tL-xtG"/>

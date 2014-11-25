@@ -8,7 +8,7 @@
 
 #import "APClientOrder.h"
 #import "APGlobal.h"
-#import "APClientOrderViewCtrl.h"
+#import "APWebViewCtrl.h"
 
 
 
@@ -20,25 +20,9 @@
 @implementation APClientOrder
 
 
-
-+(UIViewController *)getRootViewController
++(void)getWebViewWithAttributes:(NSDictionary *)attributes
 {
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    UIViewController *rootViewController = window.rootViewController;
-    return rootViewController;
-}
-
-//
-+(void)getOrderViewWithAttributes:(NSDictionary *)attributes
-{
-    
-    APClientOrderViewCtrl *viewCtrl = [[APClientOrderViewCtrl alloc] initDefaultXib:attributes];
-    
-    UINavigationController *nav = [[UINavigationController alloc]
-                                   initWithRootViewController:viewCtrl];
-    
-    UIViewController *rootViewController =[self getRootViewController];
-    [rootViewController presentViewController:nav animated:YES completion:nil];
+    [APWebViewCtrl getWebViewWithURL:[self getAPIURLString] attributes:attributes];
 }
 
 

@@ -100,7 +100,7 @@
                                  
                                  };
 
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 
 }
 
@@ -134,7 +134,7 @@
     //可設定有效時間(最長60天最短1天)可不填 (不填寫為預設3天）
     attributes[@"ExpireDate"] = @7;
 
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 }
 
 
@@ -170,7 +170,7 @@
 //    attributes[@"Desc_3"] =@"Desc_3";
 //    attributes[@"Desc_4"] =@"Desc_4";
     
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 }
 
 
@@ -195,7 +195,7 @@
     
     NSLog(@"信用卡付款");
     
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 }
 
 //信用卡分期
@@ -223,7 +223,7 @@
 //    attributes[@"Redeem"] =@"Y"; //信用卡是否使用紅利折抵。
 //    attributes[@"UnionPay"] =@"1"; //是否為銀聯卡交易
     
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 }
 
 //信用卡定期定額
@@ -250,7 +250,7 @@
     attributes[@"PeriodType"] =@"M"; //週期種類 D:天 M:月 Y:年
 
     
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 }
 
 
@@ -280,7 +280,7 @@
     attributes[@"PlatformChargeFee"]    = @30 ;   //特約合作平台商手續費可為空
 
     
-    [APClientOrder getOrderViewWithAttributes:attributes];
+    [APClientOrder getWebViewWithAttributes:attributes];
 }
 
 

@@ -8,6 +8,6 @@
     #import "APClientOrder.h"
     #import "APServerOrder.h"
     #import "APGlobal.h"
-    #import "APClientOrderViewCtrl.h"
+    #import "APWebViewCtrl.h"
 
 #endif /* _AllPayMobileSDK_ */

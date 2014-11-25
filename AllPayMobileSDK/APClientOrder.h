@@ -19,10 +19,8 @@
 // ---------------------------
 // * 顯示Order 清單
 // ---------------------------
-+(void)getOrderViewWithAttributes:(NSDictionary *)attributes;
++(void)getWebViewWithAttributes:(NSDictionary *)attributes;
 
-//取得 rootViewController (UI 顯示用）
-+(UIViewController *)getRootViewController;
 
 +(NSString *)getAPIURLString;
 @end
