@@ -9,18 +9,18 @@
 #import "APLogisticsOrder.h"
 #import "APGlobal.h"
 
-#define AP_Stage_URL_ServerOrder @"http://logistics-beta.allpay.com.tw/Mobile/CreateServerOrder"
+//#define AP_Stage_URL_ServerOrder @"http://logistics-beta.allpay.com.tw/Mobile/CreateServerOrder"
 
-//#define AP_Stage_URL_ServerOrder @"http://logistics-stage.allpay.com.tw/Mobile/CreateServerOrder"
+#define AP_Stage_URL_ServerOrder @"http://logistics-stage.allpay.com.tw/Mobile/CreateServerOrder"
 
 #define AP_Product_URL_ServerOrder @"http://logistics.allpay.com.tw/Mobile/CreateServerOrder"
 
 
 
 
-#define AP_Stage_URL_CancelOrder @"http://logistics-beta.allpay.com.tw/Mobile/CancelServerOrder"
+//#define AP_Stage_URL_CancelOrder @"http://logistics-beta.allpay.com.tw/Mobile/CancelServerOrder"
 
-//#define AP_Stage_URL_CancelOrder @"http://logistics-stage.allpay.com.tw/Mobile/CancelServerOrder"
+#define AP_Stage_URL_CancelOrder @"http://logistics-stage.allpay.com.tw/Mobile/CancelServerOrder"
 #define AP_Product_URL_CancelOrder @"https://logistics.allpay.com.tw/Mobile/CancelServerOrder"
 
 

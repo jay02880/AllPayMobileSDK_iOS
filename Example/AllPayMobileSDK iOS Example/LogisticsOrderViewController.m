@@ -12,12 +12,12 @@
 #import "APLogisticsOrder.h"
 
 
-//#define MerchantID @"2000031" //廠商編號
-//#define AppCode @"test_1234" //App代碼
-
-
-#define MerchantID @"1000139" //廠商編號
+#define MerchantID @"2000031" //廠商編號
 #define AppCode @"test_1234" //App代碼
+
+
+//#define MerchantID @"1000139" //廠商編號
+//#define AppCode @"test_1234" //App代碼
 
 @interface LogisticsOrderViewController ()
 {
@@ -192,7 +192,7 @@
                                          } mutableCopy];
     
     
-    if([typeLabel.text isEqualToString:@"HOME"]){
+    if([typeLabel.text isEqualToString:@"Home"]){
         
         //寄件人郵遞區號
         attributes[@"SenderZipCode"] = @"12300";
@@ -216,7 +216,7 @@
     }else{
         
         //收件人門市代號
-        NSString *storeID = ([subTypeLabel.text isEqual:@"FAMIC2C"]) ? @"F001168" : @"991182";
+        NSString *storeID = ([subTypeLabel.text isEqual:@"FAMIC2C"]) ? @"001779" : @"991182";
         
         NSLog(@"%@" , storeID);
         
@@ -306,6 +306,7 @@
                               }else{
                                   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:responseObject[@"RtnMsg"] delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
                                   [alertView show];
+                                  canLoadData = YES;
                                   return ;
                               }
                               

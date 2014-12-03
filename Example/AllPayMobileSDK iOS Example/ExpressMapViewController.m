@@ -33,8 +33,6 @@
     kAP_Type =@[
                 @"UNIMARTC2C",  //統一超 商寄貨便
                 @"FAMIC2C",     //"全家店到店"
-                @"UNIMART",      //統一超商
-                @"FAMI",        //全家
                 ];
     
     
