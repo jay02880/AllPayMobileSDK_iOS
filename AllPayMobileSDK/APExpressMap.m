@@ -10,7 +10,8 @@
 #import "APGlobal.h"
 
 
-#define AP_STAGE_ExpressMap_URL_STRING @"http://logistics-stage.allpay.com.tw/Express/map"
+//#define AP_STAGE_ExpressMap_URL_STRING @"http://logistics-stage.allpay.com.tw/Express/map"
+#define AP_STAGE_ExpressMap_URL_STRING @"https://logistics.allpay.com.tw/Express/map"
 #define AP_PRODUCT_ExpressMap_URL_STRING @"https://logistics.allpay.com.tw/Express/map"
 
 
